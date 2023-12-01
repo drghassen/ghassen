@@ -1,0 +1,142 @@
+.about__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: repeat(2, 1fr); */
+  align-items: center;
+  column-gap: 4rem;
+}
+
+.about__img {
+  width: 400px;
+  height: 400px;
+  border-radius: 1.5rem;
+  justify-self: center;
+  margin-right: 80px;
+}
+
+.about__info {
+  grid-template-columns: repeat(3, 140px);
+  gap: 0.5rem;
+  margin-bottom: var(-mb-2);
+}
+
+.about__box {
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  text-align: center;
+  padding: 1rem 1.25rem;
+}
+
+.about__icon {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  margin-bottom: var(--mb-0-5);
+}
+
+.about__title {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
+.about__subtitle {
+  font-size: var(--tiny-font-size);
+}
+
+.about__description {
+  padding: 0 4rem 0 0;
+  margin-bottom: var(--mb-2-5);
+  margin-top: 19px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -2px;
+}
+
+.row .info-item {
+  flex: 0 0 calc(33.3333% - 30px); /* 30px est la marge entre les éléments */
+  max-width: calc(33.3333% - 30px);
+  margin: 0 15px; /* 15px est la moitié de la marge */
+  box-sizing: border-box;
+}
+
+.row .info-item p {
+  font-weight: 600;
+  padding: 10px 0;
+  font-size: 16px;
+  color: var(--text-black-900);
+  border-bottom: 1px solid var(--bg-black-50);
+}
+
+.row .info-item p span {
+  font-weight: 400;
+  color: var(--text-black-700);
+  margin-left: 0px;
+  display: inline-block;
+}
+
+.button {
+  margin-left: 12px;
+  margin-top: 3px;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+  .about__container {
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+  }
+
+  .about__img {
+    width: 220px;
+  }
+
+  .about__box {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .about__data {
+    text-align: center;
+  }
+
+  .about__info {
+    justify-content: center;
+  }
+
+  .about__description {
+    padding: 0 5rem;
+    margin-bottom: 2rem;
+  }
+
+  .row {
+    padding: 0;
+    margin-bottom: 2rem;
+    margin: 0 auto;
+  }
+}
+
+/* For medium devices */
+
+@media screen and (max-width: 576px) {
+  .about__info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about__description {
+    padding: 0;
+  }
+  .row {
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+  .about__info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
